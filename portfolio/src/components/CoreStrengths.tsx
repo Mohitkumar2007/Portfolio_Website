@@ -1,0 +1,4 @@
+import { BrainCircuit, Database, LayoutTemplate, Wrench } from 'lucide-react'
+import { Reveal } from './Reveal'
+const strengths=[['AI / ML','Python · Machine Learning · Data Science',BrainCircuit],['Full Stack','React · Django · Node.js',LayoutTemplate],['Database','MongoDB · MySQL · Supabase',Database],['Tools','GitHub · Streamlit · VS Code',Wrench]] as const
+export function CoreStrengths(){return <section className="section strengths-section"><div className="wrap"><Reveal><p className="eyebrow">Core strengths</p><h2 className="title">A practical technical foundation.</h2></Reveal><div className="strength-grid">{strengths.map(([title,copy,Icon],index)=><Reveal delay={index*.07} key={title}><article className="strength-card"><Icon aria-hidden="true" size={21}/><h3>{title}</h3><p>{copy}</p></article></Reveal>)}</div></div></section>}

@@ -1,0 +1,13 @@
+{
+  "name": "mohit-portfolio",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix portfolio\" \"npm run dev --prefix admin\"",
+    "dev:portfolio": "npm run dev --prefix portfolio",
+    "dev:admin": "npm run dev --prefix admin",
+    "build:portfolio": "npm run build --prefix portfolio",
+    "build:admin": "npm run build --prefix admin"
+  },
+  "dependencies": { "@supabase/supabase-js": "^2.49.0", "react": "^19.0.0" },
+  "devDependencies": { "@types/react": "^19.0.0", "concurrently": "^8.0.0" }
+}
